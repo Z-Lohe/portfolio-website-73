@@ -83,7 +83,13 @@ app.get("/certificates", (req, res) => {
     }
 });
 
+app.get("/", (req, res) => {
+  res.send("Backend is running 🚀");
+});
+
 /* START SERVER */
+const PORT = process.env.PORT || 3000;
+
 app.listen(PORT, () => {
-    console.log(`Server running at http://localhost:${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });
