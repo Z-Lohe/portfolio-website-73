@@ -56,33 +56,6 @@ app.post("/contact", async (req, res) => {
     }
 });
 
-/* CERTIFICATES (MINIMAL + CLEAN) */
-app.get("/certificates", (req, res) => {
-    const basePath = path.join(__dirname, "../frontend/assets");
-
-    try {
-        const folders = fs.readdirSync(basePath);
-
-        let result = {};
-
-        folders.forEach(folder => {
-            const folderPath = path.join(basePath, folder);
-
-            if (fs.lstatSync(folderPath).isDirectory()) {
-                const files = fs.readdirSync(folderPath)
-                    .filter(file => file.endsWith(".pdf"));
-
-                result[folder] = files;
-            }
-        });
-
-        res.json(result);
-    } catch (err) {
-        console.error(err);
-        res.status(500).json({ error: "Error reading certificates" });
-    }
-});
-
 app.get("/", (req, res) => {
   res.send("Backend is running 🚀");
 });
