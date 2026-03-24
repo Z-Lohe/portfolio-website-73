@@ -1,23 +1,24 @@
 const express = require("express");
-const cors = require("cors");
 const mongoose = require("mongoose");
-const fs = require("fs");
-const path = require("path");
+const cors = require("cors");
+require("dotenv").config();
 
 const app = express();
-const PORT = 3000;
 
-/* MIDDLEWARE */
+// Middleware
 app.use(cors());
 app.use(express.json());
 
-/* DATABASE CONNECTION */
-mongoose.connect("mongodb://127.0.0.1:27017/portfolioDB")
-    .then(() => console.log("✅ MongoDB connected"))
-    .catch(err => console.log("❌ MongoDB error:", err));
+// MongoDB Connection
+mongoose.connect(process.env.MONGO_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+})
+.then(() => console.log("MongoDB Connected"))
+.catch(err => console.log(err));
 
-/* SCHEMA & MODEL */
-const MessageSchema = new mongoose.Schema({
+// Schema
+const messageSchema = new mongoose.Schema({
     name: String,
     email: String,
     message: String,
@@ -27,26 +28,27 @@ const MessageSchema = new mongoose.Schema({
     }
 });
 
-const Message = mongoose.model("Message", MessageSchema);
+// Model
+const Message = mongoose.model("Message", messageSchema);
 
-/* ROUTES */
-app.get("/", (req, res) => {
-    res.send("Backend is running successfully");
-});
-
-/* CONTACT */
+// Route
 app.post("/contact", async (req, res) => {
     try {
         const { name, email, message } = req.body;
 
-        await new Message({ name, email, message }).save();
+        const newMessage = new Message({
+            name,
+            email,
+            message
+        });
 
-        console.log("📩 Message saved to database");
+        await newMessage.save();
 
         res.json({
             success: true,
-            message: "Message received and saved successfully!"
+            message: "Message saved successfully"
         });
+
     } catch (error) {
         console.error(error);
         res.status(500).json({
@@ -56,13 +58,9 @@ app.post("/contact", async (req, res) => {
     }
 });
 
-app.get("/", (req, res) => {
-  res.send("Backend is running 🚀");
-});
-
-/* START SERVER */
+// IMPORTANT FOR RENDER
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+    console.log(`Server running on port ${PORT}`);
 });
