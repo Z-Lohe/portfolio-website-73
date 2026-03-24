@@ -1,6 +1,8 @@
 const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
+const fs = require("fs");
+const path = require("path");
 
 const app = express();
 const PORT = 3000;
@@ -32,6 +34,7 @@ app.get("/", (req, res) => {
     res.send("Backend is running successfully");
 });
 
+/* CONTACT */
 app.post("/contact", async (req, res) => {
     try {
         const { name, email, message } = req.body;
@@ -50,6 +53,33 @@ app.post("/contact", async (req, res) => {
             success: false,
             message: "Error saving message"
         });
+    }
+});
+
+/* CERTIFICATES (MINIMAL + CLEAN) */
+app.get("/certificates", (req, res) => {
+    const basePath = path.join(__dirname, "../frontend/assets");
+
+    try {
+        const folders = fs.readdirSync(basePath);
+
+        let result = {};
+
+        folders.forEach(folder => {
+            const folderPath = path.join(basePath, folder);
+
+            if (fs.lstatSync(folderPath).isDirectory()) {
+                const files = fs.readdirSync(folderPath)
+                    .filter(file => file.endsWith(".pdf"));
+
+                result[folder] = files;
+            }
+        });
+
+        res.json(result);
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: "Error reading certificates" });
     }
 });
 
