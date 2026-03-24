@@ -2,38 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Ziza Lohe | Portfolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ziza Lohe Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- Floating Background -->
-<div class="blob blob1"></div>
-<div class="blob blob2"></div>
-
-<div class="container">
-
     <!-- HERO -->
-    <section class="hero">
-        <h1>Ziza Lohe</h1>
-        <p>BCA Student | Full Stack Developer | Problem Solver</p>
-    </section>
+    <header class="hero fade-in">
+
+       <div class="profile-wrapper">
+           <img src="assets/profile.jpg" alt="Profile Photo" class="profile-pic">
+       </div>
+
+       <h1>Ziza Lohe</h1>
+       <p>BCA Student | Full Stack Developer</p>
+
+    </header>
 
     <!-- ABOUT -->
-    <section class="card">
+    <section class="card fade-in">
         <h2>About Me</h2>
         <p>
             Passionate about building full-stack web applications using modern technologies.
-            I focus on clean UI, structured backend architecture, and scalable solutions.
+            Clean UI + scalable backend is my focus.
         </p>
     </section>
 
     <!-- SKILLS -->
-    <section class="card">
+    <section class="card fade-in">
         <h2>Technical Skills</h2>
-
-        <div class="skills-grid">
+        <div class="skills">
             <span>HTML</span>
             <span>CSS</span>
             <span>JavaScript</span>
@@ -45,56 +43,142 @@
     </section>
 
     <!-- CERTIFICATIONS -->
-    <section class="card">
+    <section class="card fade-in">
         <h2>Certifications</h2>
 
-        <div class="cert-grid">
+        <div class="cert-group">
 
-            <div class="cert-card">
-                <h3>Node JS: Advanced Concepts</h3>
-                <a href="assets/nodejs-advanced.pdf" target="_blank">View Certificate</a>
+            <!-- MongoDB -->
+            <div class="cert-item">
+                <div class="cert-header">
+                    <div>
+                        <h3>MongoDB</h3>
+                        <p>Database design, CRUD, indexing & aggregation</p>
+                    </div>
+                    <span class="cert-count">
+                        12 certs 
+                        <span class="arrow">▼</span>
+                    </span>
+                </div>
+
+                <div class="cert-content">
+                    <a href="assets/mongodb/mongodb-intro.pdf" target="_blank">MongoDB Intro</a>
+                    <a href="assets/mongodb/mongodb-atlas-start.pdf" target="_blank">MongoDB Atlas Start</a>
+                    <a href="assets/mongodb/mongodb-atlas-search.pdf" target="_blank">Atlas Search</a>
+                    <a href="assets/mongodb/mongodb-aggregation.pdf" target="_blank">Aggregation</a>
+                    <a href="assets/mongodb/mongodb-insert-find.pdf" target="_blank">Insert & Find</a>
+                    <a href="assets/mongodb/mongodb-document-model.pdf" target="_blank">Document Model</a>
+                    <a href="assets/mongodb/mongodb-modify.pdf" target="_blank">Modify</a>
+                    <a href="assets/mongodb/mongodb-indexes.pdf" target="_blank">Indexes</a>
+                    <a href="assets/mongodb/mongodb-replace-delete.pdf" target="_blank">Replace & Delete</a>
+                    <a href="assets/mongodb/mongodb-transactions.pdf" target="_blank">Transactions</a>
+                    <a href="assets/mongodb/mongodb-data-modeling.pdf" target="_blank">Data Modeling</a>
+                    <a href="assets/mongodb/mongodb-connecting.pdf" target="_blank">Connecting MongoDB</a>
+                </div>
             </div>
 
-            <div class="cert-card">
-                <h3>Introduction to MongoDB</h3>
-                <a href="assets/mongodb-intro.pdf" target="_blank">View Certificate</a>
+            <!-- Frontend -->
+            <div class="cert-item">
+                <div class="cert-header">
+                    <div>
+                        <h3>Frontend Development</h3>
+                        <p>UI, responsive design, web fundamentals</p>
+                    </div>
+                    <span class="cert-count">
+                        4 certs 
+                        <span class="arrow">▼</span>
+                    </span>
+                </div>
+
+                <div class="cert-content">
+                    <a href="assets/webdev/html5.pdf" target="_blank">HTML5</a>
+                    <a href="assets/webdev/css3.pdf" target="_blank">CSS3</a>
+                    <a href="assets/webdev/javascript.pdf" target="_blank">JavaScript</a>
+                </div>
             </div>
 
-            <div class="cert-card">
-                <h3>The Complete Git Guide</h3>
-                <a href="assets/git-guide.pdf" target="_blank">View Certificate</a>
+            <!-- Backend -->
+            <div class="cert-item">
+                <div class="cert-header">
+                    <div>
+                        <h3>Backend Development</h3>
+                        <p>Node.js architecture & performance</p>
+                    </div>
+                    <span class="cert-count">
+                        1 cert 
+                        <span class="arrow">▼</span>
+                    </span>
+                </div>
+
+                <div class="cert-content">
+                    <a href="assets/backend/nodejs-advanced.pdf" target="_blank">NodeJS Advanced</a>
+                </div>
             </div>
 
-            <div class="cert-card">
-                <h3>Digital Engineering</h3>
-                <a href="assets/digital-engineering.pdf" target="_blank">View Certificate</a>
+            <!-- Tools -->
+            <div class="cert-item">
+                <div class="cert-header">
+                    <div>
+                        <h3>Tools & Version Control</h3>
+                        <p>Git workflows & collaboration</p>
+                    </div>
+                    <span class="cert-count">
+                        1 cert 
+                        <span class="arrow">▼</span>
+                    </span>
+                </div>
+
+                <div class="cert-content">
+                    <a href="assets/tools/git-guide.pdf" target="_blank">Git Guide</a>
+                </div>
+            </div>
+
+            <!-- Others -->
+            <div class="cert-item">
+                <div class="cert-header">
+                    <div>
+                        <h3>Industry Certification</h3>
+                        <p>Recognized engineering certification</p>
+                    </div>
+                   <span class="cert-count">
+                       1 cert 
+                       <span class="arrow">▼</span>
+                   </span>
+                </div>
+
+                <div class="cert-content">
+                    <a href="assets/others/digital-engineering.pdf" target="_blank">Digital Engineering</a>
+                </div>
             </div>
 
         </div>
     </section>
 
     <!-- RESUME -->
-    <section class="card">
+    <section class="card fade-in">
         <h2>Resume</h2>
         <p>Status: <span class="na">N/A</span></p>
     </section>
 
     <!-- CONTACT -->
-    <section class="card">
+    <section class="card fade-in">
         <h2>Contact</h2>
 
         <form id="contactForm">
-            <input type="text" id="name" placeholder="Your Name" required />
-            <input type="email" id="email" placeholder="Your Email" required />
-            <textarea id="message" placeholder="Your Message" required></textarea>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
             <button type="submit">Send Message</button>
         </form>
 
     </section>
 
-</div>
+    <!-- FOOTER -->
+    <footer class="fade-in">
+        <p>© 2026 Ziza Lohe. Built with passion.</p>
+    </footer>
 
-<script src="script.js"></script>
+    <script src="script.js"></script>
 
 </body>
 </html>
