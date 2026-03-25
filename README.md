@@ -6,7 +6,7 @@ A modern **full-stack portfolio website** showcasing frontend design, backend de
 
 ## 🌐 Live Demo
 
-* 🔗 **Frontend:** https://your-frontend-link
+* 🔗 **Frontend:** https://z-lohe.github.io/portfolio-website-73/
 * 🔗 **Backend API:** https://your-backend-link
 
 ---
