@@ -7,7 +7,7 @@ A modern **full-stack portfolio website** showcasing frontend design, backend de
 ## 🌐 Live Demo
 
 * 🔗 **Frontend:** https://z-lohe.github.io/portfolio-website-73/
-* 🔗 **Backend API:** n/a
+* 🔗 **Backend API:** https://portfolio-website-73.onrender.com/
 
 ---
 
