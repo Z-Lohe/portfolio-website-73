@@ -6,7 +6,7 @@ A modern **full-stack portfolio website** showcasing frontend design, backend de
 
 ## 🌐 Live Demo
 
-* 🔗 **Frontend:** https://z-lohe.github.io/portfolio-website-73/
+* 🔗 **Frontend:** https://sparkling-clafoutis-0b1c71.netlify.app/
 * 🔗 **Backend API:** https://portfolio-website-73.onrender.com/
 
 ---
