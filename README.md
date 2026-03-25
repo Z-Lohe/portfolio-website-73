@@ -1,89 +1,158 @@
 # 🚀 Full-Stack Portfolio Website
 
-This is a full-stack portfolio website built as part of the Web Development Workflow (SEC) course. It showcases modern frontend design, backend integration, database connectivity, and deployment practices.
+A modern **full-stack portfolio website** showcasing frontend design, backend development, and database integration. Built to demonstrate real-world web development workflow and deployment.
+
+---
+
+## 🌐 Live Demo
+
+* 🔗 **Frontend:** https://your-frontend-link
+* 🔗 **Backend API:** https://your-backend-link
+
+---
 
 ## ✨ Features
-- Modern glass-style UI with animations
-- Profile section with animated effects
-- Expandable certification system
-- Fully responsive design
-- Contact form with backend integration
-- Messages stored in MongoDB database
-- Accessible from any device after deployment
 
-## 🛠️ Technologies Used
+* 🎨 Modern glassmorphism UI with smooth animations
+* 🧑 Profile section with clean layout
+* 📜 Expandable certifications (accordion style)
+* 📱 Fully responsive (mobile + desktop)
+* 📩 Contact form with backend API integration
+* 🗄️ Messages stored securely in MongoDB Atlas
+* ⚡ Deployed and accessible globally
 
-Frontend:
-- HTML
-- CSS
-- JavaScript
+---
 
-Backend:
-- Node.js
-- Express.js
+## 🛠️ Tech Stack
 
-Database:
-- MongoDB Atlas
+### 🎯 Frontend
 
-Deployment:
-- Git & GitHub
-- Render (Backend Hosting)
-- GitHub Pages / Netlify (Frontend Hosting)
+* HTML5
+* CSS3
+* JavaScript (Vanilla)
+
+### ⚙️ Backend
+
+* Node.js
+* Express.js
+
+### 🗄️ Database
+
+* MongoDB Atlas
+
+### ☁️ Deployment
+
+* Git & GitHub
+* Render (Backend)
+* Netlify / GitHub Pages (Frontend)
+
+---
 
 ## 📁 Project Structure
 
+```
 portfolio/
 ├── frontend/
 │   ├── index.html
 │   ├── style.css
 │   ├── script.js
 │   └── assets/
+│
 ├── backend/
 │   ├── server.js
 │   ├── package.json
-│   └── .env
+│   └── .env (not pushed to GitHub)
+```
 
-## ⚙️ How to Run Locally
+---
 
-1. Clone the repository
-git clone https://github.com/YOUR_USERNAME/portfolio-backend.git
+## ⚙️ Environment Variables
 
-2. Navigate to backend
-cd backend
+Create a `.env` file inside the **backend folder**:
 
-3. Install dependencies
-npm install
-
-4. Create a .env file
+```
 MONGO_URI=your_mongodb_connection_string
 PORT=3000
+```
 
-5. Start server
+⚠️ Never upload `.env` to GitHub.
+
+---
+
+## 🧪 Run Locally
+
+### 1. Clone Repository
+
+```
+git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
+cd YOUR_REPO_NAME/backend
+```
+
+### 2. Install Dependencies
+
+```
+npm install
+```
+
+### 3. Start Server
+
+```
 node server.js
+```
 
 Server runs at:
+
+```
 http://localhost:3000
+```
 
-## 🌐 Live Deployment
+---
 
-Frontend: https://your-frontend-link  
-Backend: https://your-backend-link  
+## 🔗 API Endpoints
 
-## 📌 Purpose of the Project
+### POST `/contact`
+
+Stores contact form data in MongoDB
+
+**Request Body:**
+
+```
+{
+  "name": "Your Name",
+  "email": "your@email.com",
+  "message": "Your message"
+}
+```
+
+---
+
+## 🎯 Project Purpose
 
 This project demonstrates:
-- Full-stack web development workflow
-- REST API development using Express.js
-- MongoDB database integration
-- UI/UX design with animations
-- Deployment of frontend and backend separately
 
-## ⭐ Future Improvements
-- Certificate preview modal (view inside website)
-- Admin dashboard for messages
-- Authentication system
-- More advanced UI animations
+* Full-stack web development workflow
+* REST API creation with Express.js
+* MongoDB database integration
+* UI/UX design with animations
+* Deployment of frontend & backend
+
+---
+
+## 🚀 Future Improvements
+
+* 📄 Certificate preview modal
+* 🛠️ Admin dashboard for messages
+* 🔐 Authentication system
+* 🌟 Advanced animations & transitions
+
+---
 
 ## 👨‍💻 Author
 
-Ziza Lohe
+**Ziza Lohe**
+
+---
+
+## ⭐ If you like this project
+
+Give it a ⭐ on GitHub and support the journey!
